@@ -119,4 +119,127 @@ console.log("Max turshilt: ", mm);
 let random = Math.random(); // 0-1 hoorond random too gargah
 console.log(random);
 
-// bodlog8. Ugugdsun string urvuulna gargah jishee ni: input: hello output: olleh
+// bodlogo8. Ugugdsun string urvuulna gargah jishee ni: input: hello output: olleh
+
+function reverse(x) {
+  return x.split("").reverse().join("");
+}
+let reversed = reverse("Hello");
+console.log("Bodlogo8: ", reversed);
+
+// function reverse2(x) {
+//   return Array.from(x).reduce((reverse2(x), c) => c + reverse2(x), "");
+// }
+
+// bodlogo9.
+
+let students = [
+  {
+    name: "Сэд-Эрдэнэ",
+
+    age: 19,
+
+    gender: "male",
+
+    points: 70,
+  },
+
+  {
+    name: "Индра",
+
+    age: 19,
+
+    gender: "female",
+
+    points: 50,
+  },
+
+  {
+    name: "Хатнаа ",
+
+    age: 21,
+
+    gender: "male",
+
+    points: 99,
+  },
+
+  {
+    name: "Тэмүүлэн",
+
+    age: 23,
+
+    gender: "male",
+
+    points: 55,
+  },
+
+  {
+    name: "Намуун",
+
+    age: 23,
+
+    gender: "female",
+
+    points: 85,
+  },
+];
+
+// bodlogo9.1
+
+console.log("Bodlogo9.1: ", students[0]);
+
+// bodlogo9.2
+
+function male(x) {
+  let zero = 0;
+  for (i = 0; i < x.length; i++) {
+    if (x[i].gender === "male") {
+      zero = zero + 1;
+    }
+  }
+  return zero;
+}
+let students2 = male(students);
+console.log("Bodlogo9.2: Male: ", students2);
+console.log("Bodlogo9.2: Female: ", students.length - students2);
+
+// bodlogo9.3
+
+function avg(x) {
+  let zero = 0;
+  for (i = 0; i < x.length; i++) {
+    zero = zero + x[i].age;
+  }
+  return zero;
+}
+let avg2 = avg(students);
+console.log("Bodlogo9.3: ", avg2 / students.length);
+
+// bodlogo9.4
+
+function adult(x) {
+  let zero = 0;
+  for (i = 0; i < x.length; i++) {
+    if (x[i].age >= 21) {
+      zero += 1;
+    }
+  }
+  return zero;
+}
+let adult2 = adult(students);
+console.log("Bodlogo9.4: ", adult2);
+
+// bodlogo9.5
+
+function pass(x) {
+  let zero = 0;
+  for (i = 0; i < x.length; i++) {
+    if (x[i].points > 60) {
+      zero += 1;
+    }
+  }
+  return zero;
+}
+let pass2 = pass(students);
+console.log("Bodlogo9.4: ", pass2);
